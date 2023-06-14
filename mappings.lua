@@ -20,8 +20,16 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>T"] = { name = "Test" },
-
+    ["<leader>T"] = { name = "Test/Trouble" },
+    ["<leader>Tt"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Troble" },
+    ["<leader>Tf"] = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", desc = "Run File" },
+    ["<leader>TF"] = {
+      "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>",
+      desc = "Run File",
+    },
+    ["<leader>Tm"] = { "<cmd>lua require('neotest').run.run()<cr>", desc = "Run Method" },
+    ["<leader>Tm"] = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", desc = "Run Method Dap" },
+    ["<leader>Ts"] = { "<cmd>lua require('neotest').summry.toggle()<cr>", desc = "Test summury" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
