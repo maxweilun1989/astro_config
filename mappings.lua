@@ -28,8 +28,11 @@ return {
       desc = "Run File",
     },
     ["<leader>Tm"] = { "<cmd>lua require('neotest').run.run()<cr>", desc = "Run Method" },
-    ["<leader>Tm"] = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", desc = "Run Method Dap" },
-    ["<leader>Ts"] = { "<cmd>lua require('neotest').summry.toggle()<cr>", desc = "Test summury" },
+    ["<leader>TM"] = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", desc = "Run Method Dap" },
+    ["<leader>Ts"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Test summury" },
+    ["<leader>To"] = { "<cmd>lua require('neotest').output.open({enter = true})<cr>", desc = "output" },
+
+    ["<leader>fd"] = { ":DashWord<cr>", desc = "Dash "}
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

@@ -42,4 +42,9 @@ return {
       "rouge8/neotest-rust",
     },
   },
+  {
+    "mrjones2014/dash.nvim",
+    build = "make install",
+    ft = { "go"}
+  },
 }
